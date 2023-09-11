@@ -1,0 +1,3 @@
+variable "World" {
+    value "Earth" {}
+}
