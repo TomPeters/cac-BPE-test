@@ -12,3 +12,18 @@ step "hello-world" {
         worker_pool = "hosted-ubuntu"
     }
 }
+
+step "my-new-feature-step" {
+    name = "My new feature step"
+
+    action {
+        action_type = "Octopus.Script"
+        properties = {
+            Octopus.Action.RunOnServer = "true"
+            Octopus.Action.Script.ScriptBody = "echo \"This is my new feature!\""
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "Bash"
+        }
+        worker_pool = "hosted-ubuntu"
+    }
+}
