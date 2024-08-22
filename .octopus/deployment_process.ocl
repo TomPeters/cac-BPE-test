@@ -4,7 +4,6 @@ step "hello-world" {
     action {
         action_type = "Octopus.Script"
         properties = {
-            Octopus.Action.RunOnServer = "true"
             Octopus.Action.Script.ScriptBody = "echo \"Hello world!\""
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
@@ -19,7 +18,6 @@ step "my-new-feature-step" {
     action {
         action_type = "Octopus.Script"
         properties = {
-            Octopus.Action.RunOnServer = "true"
             Octopus.Action.Script.ScriptBody = "echo \"This is my new feature!\""
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
